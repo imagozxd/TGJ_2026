@@ -26,6 +26,11 @@ public class UIDragDrop : MonoBehaviour,
 
         canvasGroup.blocksRaycasts = false; // permite detectar drop debajo
         canvasGroup.alpha = 0.8f;
+        Pollo pollo = GetComponent<Pollo>();
+        if (pollo != null)
+        {
+            pollo.StopCooking();
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
