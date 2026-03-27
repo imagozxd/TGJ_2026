@@ -5,19 +5,21 @@ public class Horno : MonoBehaviour, IDropHandler
 {
     public bool hasBarras = false;
 
+    public Barras barras; //  referencia al sistema de barras
+
     public void OnDrop(PointerEventData eventData)
     {
         // 1. Detectar barras
-        BarrasItem barras = eventData.pointerDrag.GetComponent<BarrasItem>();
+        Barras barrasItem = eventData.pointerDrag.GetComponent<Barras>();
 
-        if (barras != null && !hasBarras)
+        if (barrasItem != null && !hasBarras)
         {
             hasBarras = true;
 
-            barras.transform.SetParent(transform, false);
-            barras.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+            barrasItem.transform.SetParent(transform, false);
+            barrasItem.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
 
-            Debug.Log("Barras colocadas");
+            Debug.Log(" Barras colocadas");
             return;
         }
 
@@ -28,7 +30,7 @@ public class Horno : MonoBehaviour, IDropHandler
         {
             if (!hasBarras)
             {
-                Debug.Log("Faltan barras");
+                Debug.Log(" Faltan barras");
                 return;
             }
 
@@ -40,7 +42,21 @@ public class Horno : MonoBehaviour, IDropHandler
 
             pollo.StartCooking();
 
-            Debug.Log("Pollo en horno");
+            //  REGISTRAR POLLO (CLAVE PARA RESET)
+            if (barras != null)
+            {
+                barras.RegistrarPollo(pollo.gameObject);
+                Debug.Log(" Pollo registrado en barras");
+            }
+
+            Debug.Log(" Pollo en horno");
         }
+    }
+
+    //  Reset lógico del horno
+    public void ResetHorno()
+    {
+        hasBarras = false;
+        Debug.Log(" Horno reseteado");
     }
 }

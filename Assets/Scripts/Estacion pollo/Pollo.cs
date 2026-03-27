@@ -78,4 +78,12 @@ public class Pollo : MonoBehaviour
     {
         return estado == Estado.Cocido || estado == Estado.Quemado;
     }
+    public void ResetPollo()
+    {
+        estado = Estado.Crudo;
+        StopCooking();
+
+        // opcional: sprite crudo
+        Debug.Log("Pollo reseteado");
+    }
 }
