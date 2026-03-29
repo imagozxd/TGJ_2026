@@ -8,7 +8,7 @@ public class SliderCoccion : MonoBehaviour
     private int ciclosActuales = 0;
     private bool fueACero = false;
 
-    // objeto UI que se activará al terminar
+    // objeto UI que se activarï¿½ al terminar
     public GameObject chaufaListo;
 
     public void OnSliderChanged(float value)

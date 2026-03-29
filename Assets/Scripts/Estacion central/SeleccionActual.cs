@@ -7,6 +7,7 @@ public class SeleccionActual : MonoBehaviour
 
     public PlatoData platoSeleccionado;
     public Bebida bebidaSeleccionada;
+    public bool tieneBebidaSeleccionada;
     public List<Crema> cremasSeleccionadas = new List<Crema>();
 
     private void Awake()
@@ -23,6 +24,7 @@ public class SeleccionActual : MonoBehaviour
     public void SeleccionarBebida(Bebida bebida)
     {
         bebidaSeleccionada = bebida;
+        tieneBebidaSeleccionada = true;
         Debug.Log("Bebida seleccionada: " + bebida);
     }
 
@@ -44,6 +46,7 @@ public class SeleccionActual : MonoBehaviour
     {
         platoSeleccionado = null;
         bebidaSeleccionada = default;
+        tieneBebidaSeleccionada = false;
         cremasSeleccionadas.Clear();
     }
 }
