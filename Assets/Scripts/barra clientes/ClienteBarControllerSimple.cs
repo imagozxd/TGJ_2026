@@ -70,6 +70,13 @@ public class ClienteBarControllerSimple : MonoBehaviour
         go.transform.position = puntoA.position;
 
         ClienteMover mover = go.GetComponent<ClienteMover>();
+        Cliente newCliente = new Cliente
+        {
+            estado = ClienteEstado.Acercandose,
+            tipo = (TipoCliente)Random.Range(0, 3)
+        };
+        
+        Debug.Log($"[ClienteBarControllerSimple] Nuevo cliente generado: {newCliente.tipo.ToString()}");
 
         if (mover == null)
         {
@@ -78,13 +85,13 @@ public class ClienteBarControllerSimple : MonoBehaviour
         }
 
         // inicializa movimiento hacia B
-        mover.Init(puntoB.position, speed);
+        mover.Init(puntoB.position, speed, newCliente);
 
         clientes.Add(mover);
     }
 
     // llamado cuando el cliente llega a B
-    public void ClienteLlego(ClienteMover cliente)
+    public void ClienteLlego(ClienteMover clienteMover)
     {
         clientesEnLocal++;
 
@@ -93,7 +100,7 @@ public class ClienteBarControllerSimple : MonoBehaviour
         // intentar asignar a un slot de pedidos
         if (manager != null)
         {
-            manager.ClienteLlego();
+            manager.ClienteLlego(clienteMover.GetCliente());
         }
         else
         {
@@ -119,6 +126,8 @@ public class ClienteBarControllerSimple : MonoBehaviour
 
                 clientesEnLocal--;
 
+                // TODO : Agregar el pedido correcto a eliminar
+                UIGeneralManager.Instance.ProcessClientePedidoCompleted(null);
                 Debug.Log("Cliente atendido");
                 return;
             }

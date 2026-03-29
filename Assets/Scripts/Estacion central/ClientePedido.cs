@@ -4,7 +4,8 @@ using System.Collections.Generic;
 public class ClientePedido : MonoBehaviour
 {
     public Pedido pedido;
-    public ClientePedidoUI ui;
+    public Cliente cliente;
+    //public ClientePedidoUI ui;
 
     private void Awake()
     {
@@ -19,9 +20,15 @@ public class ClientePedido : MonoBehaviour
 
         pedido.pideBebida = Random.Range(0, 2) == 1;
         if (pedido.pideBebida)
+        {
             pedido.bebida = (Bebida)Random.Range(0, 3);
+            pedido.tamañoBebida = (TamañoBebida)Random.Range(0, 3);
+        }
         else
+        {
             pedido.bebida = default;
+            pedido.tamañoBebida = default;
+        }
 
         int cantidad = Random.Range(0, 3);
         if (cantidad == 0)
@@ -58,8 +65,8 @@ public class ClientePedido : MonoBehaviour
         }
 
         Debug.Log("Pedido: " + pedido.plato + " - " + bebidaStr + " - [" + cremasStr + "]");
-        if (ui != null)
-            ui.RefreshUI();
+/*        if (ui != null)
+            ui.RefreshUI();*/
     }
 
     public void LimpiarPedido()

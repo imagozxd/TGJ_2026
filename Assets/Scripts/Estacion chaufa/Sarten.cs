@@ -43,7 +43,16 @@ public class Sarten : MonoBehaviour, IDropHandler
             return;
 
         ingredientes.Add(ingredientType);
-        ingredientesUsados.Add(obj); //  guardar referencia
+        ingredientesUsados.Add(obj);
+
+        // limpiar ghost activo y deshabilitar drag
+        DraggableItem dragItem = obj.GetComponent<DraggableItem>();
+        if (dragItem != null)
+        {
+            dragItem.CleanupGhost();
+            dragItem.fueEntregado = true;
+            dragItem.enabled = false;
+        }
 
         obj.transform.SetParent(transform, false);
         obj.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
@@ -56,7 +65,7 @@ public class Sarten : MonoBehaviour, IDropHandler
             cg.interactable = false;
         }
 
-        var drag = obj.GetComponent<UIDragDrop>();
+        var drag = obj.GetComponent<DraggableItem>();
         if (drag != null) drag.enabled = false;
     }
 
@@ -111,7 +120,7 @@ public class Sarten : MonoBehaviour, IDropHandler
             }
 
             //  reactivar drag
-            var drag = obj.GetComponent<UIDragDrop>();
+            var drag = obj.GetComponent<DraggableItem>();
             if (drag != null)
             {
                 drag.enabled = true;

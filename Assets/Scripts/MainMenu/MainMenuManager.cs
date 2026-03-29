@@ -34,7 +34,7 @@ public class MainMenuManager : MonoBehaviour
     }
 
     private void OnStartGameClicked() {
-        SceneManager.LoadScene("IntroToGame");
+        SceneManager.LoadScene("MainGame");
     }
 
     private void OnTutorialClicked() {

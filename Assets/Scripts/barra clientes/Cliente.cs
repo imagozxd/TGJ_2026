@@ -12,7 +12,7 @@ public class Cliente
 }
 public enum TipoCliente
 {
-    Cliente1,
-    Cliente2,
-    Cliente3
+    SusyDiaz,
+    Dina,
+    Zumba
 }

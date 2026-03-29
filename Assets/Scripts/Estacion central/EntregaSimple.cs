@@ -41,6 +41,7 @@ public class EntregaSimple : MonoBehaviour
             mostrador.RemoverPlato(sel.platoSeleccionado);
 
             // limpiar cliente (no destruir slot)
+            UIGeneralManager.Instance.ProcessClientePedidoCompleted(cliente);
             cliente.pedido = null;
 
             // opcional: regenerar otro pedido o dejar vac�o
@@ -70,6 +71,9 @@ public class EntregaSimple : MonoBehaviour
                 return false;
 
             if (cliente.pedido.bebida != sel.bebidaSeleccionada)
+                return false;
+
+            if (cliente.pedido.tamañoBebida != sel.tamañoBebidaSeleccionada)
                 return false;
         }
 

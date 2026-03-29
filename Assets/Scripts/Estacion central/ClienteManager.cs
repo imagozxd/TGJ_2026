@@ -4,7 +4,7 @@ public class ClienteManager : MonoBehaviour
 {
     public ClientePedido[] slots; // ClienteSlot_1, ClienteSlot_2
 
-    public void ClienteLlego()
+    public void ClienteLlego(Cliente cliente)
     {
         Debug.Log("Intentando asignar cliente a slot");
 
@@ -13,6 +13,8 @@ public class ClienteManager : MonoBehaviour
             if (!slots[i].TienePedido())
             {
                 slots[i].GenerarPedidoRandom();
+                slots[i].cliente = cliente;
+                UIGeneralManager.Instance.ProcessNewClientePedido(slots[i]);
 
                 Debug.Log("Cliente asignado a slot " + i);
                 return;
