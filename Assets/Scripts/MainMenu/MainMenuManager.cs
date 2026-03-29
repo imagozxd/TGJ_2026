@@ -28,7 +28,7 @@ public class MainMenuManager : MonoBehaviour
     }
 
     private void OnStartGameClicked() {
-        SceneManager.LoadScene("MScene");
+        SceneManager.LoadScene("IntroToGame");
     }
 
     private void OnTutorialClicked() {
@@ -36,11 +36,11 @@ public class MainMenuManager : MonoBehaviour
     }
 
     private void OnIntroSequenceClicked() {
-        SceneManager.LoadScene("IntroSequence");
+        SceneManager.LoadScene("Intro");
     }
 
     private void OnCreditsClicked() {
-        SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("Creditos");
     }
 
     private void OnQuitGameClicked() {
