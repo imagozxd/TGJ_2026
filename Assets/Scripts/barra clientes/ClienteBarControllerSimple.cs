@@ -119,6 +119,8 @@ public class ClienteBarControllerSimple : MonoBehaviour
 
                 clientesEnLocal--;
 
+                // TODO : Agregar el pedido correcto a eliminar
+                UIGeneralManager.Instance.ProcessClientePedidoCompleted(null);
                 Debug.Log("Cliente atendido");
                 return;
             }

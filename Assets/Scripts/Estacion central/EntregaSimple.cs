@@ -41,6 +41,7 @@ public class EntregaSimple : MonoBehaviour
             mostrador.RemoverPlato(sel.platoSeleccionado);
 
             // limpiar cliente (no destruir slot)
+            UIGeneralManager.Instance.ProcessClientePedidoCompleted(cliente);
             cliente.pedido = null;
 
             // opcional: regenerar otro pedido o dejar vac�o
