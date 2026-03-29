@@ -24,7 +24,11 @@ public class Mostrador : MonoBehaviour
         PlatoData data = go.AddComponent<PlatoData>();
         data.tipo = tipo;
 
-        // permitir click
+        // slot de pedido: gestiona bebida + cremas del plato
+        SlotMostrador slotComp = go.AddComponent<SlotMostrador>();
+        slotComp.platoData = data;
+
+        // permitir click y drop de bebidas/cremas
         go.AddComponent<PlatoClickable>();
 
         platos.Add(go);
@@ -39,6 +43,10 @@ public class Mostrador : MonoBehaviour
 
         if (platos.Contains(plato.gameObject))
         {
+            // limpiar bebida/cremas del slot antes de destruir
+            SlotMostrador slotComp = plato.GetComponent<SlotMostrador>();
+            if (slotComp != null) slotComp.LimpiarVisuales();
+
             platos.Remove(plato.gameObject);
             Destroy(plato.gameObject);
 

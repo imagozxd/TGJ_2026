@@ -15,7 +15,7 @@ public class EstacionPollo : MonoBehaviour
     // Todos los objetos que deben resetearse (fosforo, barras, pollo, etc.)
     public List<GameObject> objetosReset = new List<GameObject>();
 
-    // llamado cuando el pollo está listo para enviarse
+    // llamado cuando el pollo estï¿½ listo para enviarse
     public void EnviarPolloAlMostrador()
     {
         if (mostrador == null)
@@ -40,7 +40,7 @@ public class EstacionPollo : MonoBehaviour
     {
         Debug.Log("Reset Estacion Pollo");
 
-        // Reset lógico del horno
+        // Reset lï¿½gico del horno
         if (horno != null)
             horno.ResetHorno();
 
@@ -65,7 +65,7 @@ public class EstacionPollo : MonoBehaviour
                 // volver a su padre original
                 obj.transform.SetParent(init.initialParent, false);
 
-                // restaurar posición inicial
+                // restaurar posiciï¿½n inicial
                 rect.anchoredPosition = init.initialPosition;
 
                 // asegurar orden visual
@@ -73,11 +73,11 @@ public class EstacionPollo : MonoBehaviour
             }
 
             // reactivar drag
-            var drag = obj.GetComponent<UIDragDrop>();
+            var drag = obj.GetComponent<DraggableItem>();
             if (drag != null)
                 drag.enabled = true;
 
-            // reactivar interacción
+            // reactivar interacciï¿½n
             var cg = obj.GetComponent<CanvasGroup>();
             if (cg != null)
             {

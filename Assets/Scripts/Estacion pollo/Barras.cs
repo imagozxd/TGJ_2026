@@ -53,7 +53,7 @@ public class Barras : MonoBehaviour
             }
 
             // 🔓 reactivar drag
-            var drag = pollo.GetComponent<UIDragDrop>();
+            var drag = pollo.GetComponent<DraggableItem>();
             if (drag != null)
                 drag.enabled = true;
 

@@ -16,6 +16,9 @@ public class Horno : MonoBehaviour, IDropHandler
         {
             hasBarras = true;
 
+            DraggableItem dBarras = barrasItem.GetComponent<DraggableItem>();
+            if (dBarras != null) { dBarras.CleanupGhost(); dBarras.fueEntregado = true; }
+
             barrasItem.transform.SetParent(transform, false);
             barrasItem.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
 
@@ -37,6 +40,9 @@ public class Horno : MonoBehaviour, IDropHandler
             if (pollo.estado != Pollo.Estado.Crudo)
                 return;
 
+            DraggableItem dPollo = pollo.GetComponent<DraggableItem>();
+            if (dPollo != null) { dPollo.CleanupGhost(); dPollo.fueEntregado = true; }
+
             pollo.transform.SetParent(transform, false);
             pollo.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
 
@@ -53,7 +59,7 @@ public class Horno : MonoBehaviour, IDropHandler
         }
     }
 
-    //  Reset lógico del horno
+    //  Reset lï¿½gico del horno
     public void ResetHorno()
     {
         hasBarras = false;

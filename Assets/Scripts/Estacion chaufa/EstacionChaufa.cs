@@ -28,7 +28,7 @@ public class EstacionChaufa : MonoBehaviour
         if (chaufaListo != null)
             chaufaListo.SetActive(false);
 
-        // reset básico de objetos (posición + interacción)
+        // reset bï¿½sico de objetos (posiciï¿½n + interacciï¿½n)
         foreach (var obj in objetosReset)
         {
             if (obj == null) continue;
@@ -52,7 +52,7 @@ public class EstacionChaufa : MonoBehaviour
                 cg.alpha = 1f;
             }
 
-            var drag = obj.GetComponent<UIDragDrop>();
+            var drag = obj.GetComponent<DraggableItem>();
             if (drag != null)
                 drag.enabled = true;
         }
