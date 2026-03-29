@@ -8,5 +8,6 @@ public class Pedido
     public bool pideBebida = true;
 
     public Bebida bebida;
+    public TamañoBebida tamañoBebida;
     public List<Crema> cremas;
 }

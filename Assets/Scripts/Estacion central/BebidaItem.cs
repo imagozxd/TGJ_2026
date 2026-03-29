@@ -3,10 +3,11 @@ using UnityEngine.EventSystems;
 
 public class BebidaItem : MonoBehaviour, IPointerClickHandler
 {
-    public Bebida tipo;
+    [SerializeField] private Bebida tipo;
+    [SerializeField] private TamañoBebida tamaño;
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        SeleccionActual.Instance.SeleccionarBebida(tipo);
+        SeleccionActual.Instance.SeleccionarBebida(tipo, tamaño);
     }
 }

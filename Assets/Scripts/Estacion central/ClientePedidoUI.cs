@@ -17,6 +17,9 @@ public class ClientePedidoUI : MonoBehaviour
     public Sprite[] spritesBebida;  // Coca, Inca, Sprite
     public Sprite[] spritesCremas;  // Mayo, Mostaza, Ketchup
 
+    [Header("Tamaño bebida")]
+    public TMPro.TextMeshProUGUI textTamaño;
+
     public void RefreshUI()
     {
         if (cliente == null || cliente.pedido == null)
@@ -37,6 +40,13 @@ public class ClientePedidoUI : MonoBehaviour
             iconoBebida.gameObject.SetActive(pedido.pideBebida);
             if (pedido.pideBebida && spritesBebida != null && (int)pedido.bebida >= 0 && (int)pedido.bebida < spritesBebida.Length)
                 iconoBebida.sprite = spritesBebida[(int)pedido.bebida];
+        }
+
+        if (textTamaño != null)
+        {
+            textTamaño.gameObject.SetActive(pedido.pideBebida);
+            if (pedido.pideBebida)
+                textTamaño.text = pedido.tamañoBebida.ToString();
         }
 
         if (contenedorCremas != null)

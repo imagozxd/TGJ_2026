@@ -7,6 +7,7 @@ public class SeleccionActual : MonoBehaviour
 
     public PlatoData platoSeleccionado;
     public Bebida bebidaSeleccionada;
+    public TamañoBebida tamañoBebidaSeleccionada;
     public bool tieneBebidaSeleccionada;
     public List<Crema> cremasSeleccionadas = new List<Crema>();
 
@@ -21,11 +22,12 @@ public class SeleccionActual : MonoBehaviour
         Debug.Log("Plato seleccionado: " + plato.tipo);
     }
 
-    public void SeleccionarBebida(Bebida bebida)
+    public void SeleccionarBebida(Bebida bebida, TamañoBebida tamaño)
     {
         bebidaSeleccionada = bebida;
+        tamañoBebidaSeleccionada = tamaño;
         tieneBebidaSeleccionada = true;
-        Debug.Log("Bebida seleccionada: " + bebida);
+        Debug.Log("Bebida seleccionada: " + bebida + " (" + tamaño + ")");
     }
 
     public void ToggleCrema(Crema crema)
@@ -46,6 +48,7 @@ public class SeleccionActual : MonoBehaviour
     {
         platoSeleccionado = null;
         bebidaSeleccionada = default;
+        tamañoBebidaSeleccionada = default;
         tieneBebidaSeleccionada = false;
         cremasSeleccionadas.Clear();
     }
