@@ -13,6 +13,7 @@ public class ClienteManager : MonoBehaviour
             if (!slots[i].TienePedido())
             {
                 slots[i].GenerarPedidoRandom();
+                UIGeneralManager.Instance.ProcessNewClientePedido(slots[i]);
 
                 Debug.Log("Cliente asignado a slot " + i);
                 return;

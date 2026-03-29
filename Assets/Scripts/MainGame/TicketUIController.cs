@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TicketUICOntroller : MonoBehaviour
 {
@@ -19,30 +20,29 @@ public class TicketUICOntroller : MonoBehaviour
     [SerializeField] private GameObject ketchupGO;
 
     [Header("Sprites")]
-    [SerializeField] private Sprite coca1LTSPR;
-    [SerializeField] private Sprite cocaMediaSPR;
-    [SerializeField] private Sprite cocaPersonalSPR;
-    [SerializeField] private Sprite inka1LTSPR;
-    [SerializeField] private Sprite inkaMediaSPR;
-    [SerializeField] private Sprite inkaPersonalSPR;
+    [SerializeField] private Texture coca1LTSPR;
+    [SerializeField] private Texture cocaMediaSPR;
+    [SerializeField] private Texture cocaPersonalSPR;
+    [SerializeField] private Texture inka1LTSPR;
+    [SerializeField] private Texture inkaMediaSPR;
+    [SerializeField] private Texture inkaPersonalSPR;
+    [SerializeField] private Texture sprite1LTSPR;
+    [SerializeField] private Texture spriteMediaSPR;
+    [SerializeField] private Texture spritePersonalSPR;
 
-    [SerializeField] private Sprite sprite1LTSPR;
-    [SerializeField] private Sprite spriteMediaSPR;
-    [SerializeField] private Sprite spritePersonalSPR;
-
-    private Pedido pedido;
+    private ClientePedido clientePedido;
 
     void Start()
     {
         checkGO.SetActive(false);
     }
 
-    public void Init(Pedido pedido)
+    public void Init(ClientePedido newClientePedido)
     {
-        this.pedido = pedido;
+        clientePedido = newClientePedido;
         checkGO.SetActive(false);
 
-        if (pedido.plato == TipoPlato.Pollo)
+        if (clientePedido.pedido.plato == TipoPlato.Pollo)
         {
             polloGO.SetActive(true);
             chaufaGO.SetActive(false);
@@ -54,28 +54,46 @@ public class TicketUICOntroller : MonoBehaviour
         }
 
         // Bebidas
-        if (pedido.pideBebida)
+        if (clientePedido.pedido.pideBebida)
         {
-            switch (pedido.bebida)
+            switch (clientePedido.pedido.bebida)
             {
                 case Bebida.Coca:
-                    gaseosa1LTGO.GetComponent<SpriteRenderer>().sprite = coca1LTSPR;
-                    gaseosaMediaGO.GetComponent<SpriteRenderer>().sprite = cocaMediaSPR;
-                    gaseosaPersonalGO.GetComponent<SpriteRenderer>().sprite = cocaPersonalSPR;
+                    gaseosa1LTGO.GetComponentInChildren<RawImage>().texture = coca1LTSPR;
+                    gaseosaMediaGO.GetComponentInChildren<RawImage>().texture = cocaMediaSPR;
+                    gaseosaPersonalGO.GetComponentInChildren<RawImage>().texture = cocaPersonalSPR;
                     break;
                 case Bebida.Inca:
-                    gaseosa1LTGO.GetComponent<SpriteRenderer>().sprite = inka1LTSPR;
-                    gaseosaMediaGO.GetComponent<SpriteRenderer>().sprite = inkaMediaSPR;
-                    gaseosaPersonalGO.GetComponent<SpriteRenderer>().sprite = inkaPersonalSPR;
+                    gaseosa1LTGO.GetComponentInChildren<RawImage>().texture = inka1LTSPR;
+                    gaseosaMediaGO.GetComponentInChildren<RawImage>().texture = inkaMediaSPR;
+                    gaseosaPersonalGO.GetComponentInChildren<RawImage>().texture = inkaPersonalSPR;
                     break;
                 case Bebida.Sprite:
-                    gaseosa1LTGO.GetComponent<SpriteRenderer>().sprite = sprite1LTSPR;
-                    gaseosaMediaGO.GetComponent<SpriteRenderer>().sprite = spriteMediaSPR;
-                    gaseosaPersonalGO.GetComponent<SpriteRenderer>().sprite = spritePersonalSPR;
+                    gaseosa1LTGO.GetComponentInChildren<RawImage>().texture = sprite1LTSPR;
+                    gaseosaMediaGO.GetComponentInChildren<RawImage>().texture = spriteMediaSPR;
+                    gaseosaPersonalGO.GetComponentInChildren<RawImage>().texture = spritePersonalSPR;
                     break;
             }
 
             // TODO: AQuí dependiendo del tamaño de la gaseosa se activa el GO correspondiente
+            switch (clientePedido.pedido.tamañoBebida)
+            {
+                case TamañoBebida.Chico:
+                    gaseosa1LTGO.SetActive(false);
+                    gaseosaMediaGO.SetActive(false);
+                    gaseosaPersonalGO.SetActive(true);
+                    break;
+                case TamañoBebida.Mediano:
+                    gaseosa1LTGO.SetActive(false);
+                    gaseosaMediaGO.SetActive(true);
+                    gaseosaPersonalGO.SetActive(false);
+                    break;
+                case TamañoBebida.Grande:
+                    gaseosa1LTGO.SetActive(true);
+                    gaseosaMediaGO.SetActive(false);
+                    gaseosaPersonalGO.SetActive(false);
+                    break;
+            }
         }
         else
         {
@@ -85,11 +103,11 @@ public class TicketUICOntroller : MonoBehaviour
         }
 
         // Cremas
-        if (pedido.cremas != null)
+        if (clientePedido.pedido.cremas != null)
         {
-            mayonesaGO.SetActive(pedido.cremas.Contains(Crema.Mayo));
-            mostazaGO.SetActive(pedido.cremas.Contains(Crema.Mostaza));
-            ketchupGO.SetActive(pedido.cremas.Contains(Crema.Ketchup));
+            mayonesaGO.SetActive(clientePedido.pedido.cremas.Contains(Crema.Mayo));
+            mostazaGO.SetActive(clientePedido.pedido.cremas.Contains(Crema.Mostaza));
+            ketchupGO.SetActive(clientePedido.pedido.cremas.Contains(Crema.Ketchup));
         }
         else
         {
@@ -99,9 +117,9 @@ public class TicketUICOntroller : MonoBehaviour
         }
     }
 
-    public bool EsPedido(Pedido pedido)
+    public bool EsClientePedido(ClientePedido newClientePedido)
     {
-        return this.pedido == pedido;
+        return clientePedido == newClientePedido;
     }
 
     public void MarkAsReady()

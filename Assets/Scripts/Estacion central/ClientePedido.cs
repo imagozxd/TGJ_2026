@@ -4,7 +4,8 @@ using System.Collections.Generic;
 public class ClientePedido : MonoBehaviour
 {
     public Pedido pedido;
-    public ClientePedidoUI ui;
+    public Cliente cliente;
+    //public ClientePedidoUI ui;
 
     private void Awake()
     {
@@ -64,8 +65,8 @@ public class ClientePedido : MonoBehaviour
         }
 
         Debug.Log("Pedido: " + pedido.plato + " - " + bebidaStr + " - [" + cremasStr + "]");
-        if (ui != null)
-            ui.RefreshUI();
+/*        if (ui != null)
+            ui.RefreshUI();*/
     }
 
     public void LimpiarPedido()
