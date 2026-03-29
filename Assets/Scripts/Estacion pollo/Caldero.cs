@@ -13,7 +13,7 @@ public class Caldero : MonoBehaviour, IDropHandler
 
         if (isOn)
         {
-            Debug.Log("El caldero ya está encendido");
+            Debug.Log("El caldero ya estï¿½ encendido");
             return;
         }
 
@@ -21,7 +21,8 @@ public class Caldero : MonoBehaviour, IDropHandler
 
         Debug.Log("Caldero encendido");
 
-        // opcional: consumir fósforo
+        fosforo.CleanupGhost();
+        fosforo.fueEntregado = true;
         fosforo.gameObject.SetActive(false);
     }
 }

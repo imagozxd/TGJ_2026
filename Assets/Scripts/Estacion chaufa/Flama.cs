@@ -13,6 +13,8 @@ public class Flama : MonoBehaviour, IDropHandler
         if (fosforo == null) return;
 
         isOn = true;
+        fosforo.CleanupGhost();
+        fosforo.fueEntregado = true;
         fosforo.gameObject.SetActive(false);
 
         Debug.Log("Flama encendida");
