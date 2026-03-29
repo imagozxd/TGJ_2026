@@ -38,13 +38,13 @@ public class PlatoPolloFinal : MonoBehaviour, IDropHandler
             Debug.LogError("Mostrador no asignado");
         }
 
-        // detener cocción
+        // detener cocciï¿½n
         pollo.StopCooking();
 
         // ocultar objeto (se consume)
         obj.SetActive(false);
 
-        // reset estación
+        // reset estaciï¿½n
         estacion.ResetEstacion();
     }
 }

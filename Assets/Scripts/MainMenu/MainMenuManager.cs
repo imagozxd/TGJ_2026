@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -25,6 +26,11 @@ public class MainMenuManager : MonoBehaviour
         introSequenceButton.onClick.RemoveListener(OnIntroSequenceClicked);
         creditsButton.onClick.RemoveListener(OnCreditsClicked);
         quitGameButton.onClick.RemoveListener(OnQuitGameClicked);
+    }
+
+    public void Start()
+    {
+        AudioManager.Instance.PlayBGM("MenuMusic");
     }
 
     private void OnStartGameClicked() {

@@ -18,12 +18,14 @@ public class ClienteBarControllerSimple : MonoBehaviour
 
     public float speed = 100f;
 
-    // conexión con manager de slots
+    // conexiï¿½n con manager de slots
     public ClienteManager manager;
 
     private List<ClienteMover> clientes = new List<ClienteMover>();
 
     private int clientesEnLocal = 0;
+
+    private Coroutine spawnLoopCoroutine;
 
     private void Awake()
     {
@@ -33,7 +35,12 @@ public class ClienteBarControllerSimple : MonoBehaviour
     // inicia el sistema de spawn
     public void StartGame()
     {
-        StartCoroutine(SpawnLoop());
+        if (spawnLoopCoroutine != null)
+        {
+            return;
+        }
+
+        spawnLoopCoroutine = StartCoroutine(SpawnLoop());
     }
 
     // loop que genera clientes con tiempo aleatorio
@@ -48,7 +55,7 @@ public class ClienteBarControllerSimple : MonoBehaviour
         }
     }
 
-    // crea un cliente en A y lo envía a B
+    // crea un cliente en A y lo envï¿½a a B
     public void SpawnCliente()
     {
         if (clientePrefab == null || puntoA == null || puntoB == null)
@@ -93,7 +100,7 @@ public class ClienteBarControllerSimple : MonoBehaviour
             Debug.LogWarning("ClienteManager no asignado");
         }
 
-        // condición de derrota
+        // condiciï¿½n de derrota
         if (clientesEnLocal > 2)
         {
             Debug.Log("GAME OVER");

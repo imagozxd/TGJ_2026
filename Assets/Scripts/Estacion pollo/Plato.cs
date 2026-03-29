@@ -11,7 +11,7 @@ public class Plato : MonoBehaviour, IDropHandler
 
         if (pollo == null) return;
 
-        if (pollo.estado == Pollo.Estado.Crudo)
+        if (!pollo.EsServible())
         {
             Debug.Log("No puedes servir pollo crudo");
             return;
@@ -24,7 +24,7 @@ public class Plato : MonoBehaviour, IDropHandler
 
         Debug.Log($" Plato listo con pollo: {pollo.estado}");
 
-        //  RESET SOLO ESTA ESTACIÓN
+        //  RESET SOLO ESTA ESTACIï¿½N
         estacion.ResetEstacion();
     }
 }
