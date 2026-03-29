@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Intro.unity
     guid: 58395aa2c9006d745990f11cc3003f65
   - enabled: 1
-    path: Assets/Scenes/IntroToMenu.unity
+    path: Assets/Scenes/IntroToGame.unity
     guid: 0f929288cd38119419550c453b85b4f9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
