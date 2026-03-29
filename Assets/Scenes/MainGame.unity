@@ -5896,7 +5896,6 @@ GameObject:
   - component: {fileID: 1603822866}
   - component: {fileID: 1603822865}
   - component: {fileID: 1603822864}
-  - component: {fileID: 1603822867}
   - component: {fileID: 1603822868}
   m_Layer: 5
   m_Name: fosforo
@@ -5975,18 +5974,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1603822861}
   m_CullTransparentMesh: 1
---- !u!114 &1603822867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1603822861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fde7a6534cff58245898a57dd0f40428, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Fosforo
 --- !u!114 &1603822868
 MonoBehaviour:
   m_ObjectHideFlags: 0
