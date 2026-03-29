@@ -5269,12 +5269,12 @@ MonoBehaviour:
   m_soundPoolPrefab: {fileID: 6332073143503927589, guid: 4f305a247c5fbf0488c135d907a7313e, type: 3}
   m_MusicList:
   - name: BgMusic
-    clip: {fileID: 8300000, guid: 97195effc8d742148a8e176e0ca0607c, type: 3}
+    clip: {fileID: 8300000, guid: 50b45f1fdc3b6fb4c85786de8e71fe60, type: 3}
     volume: 1
     pitch: 1
     loop: 1
   - name: MenuMusic
-    clip: {fileID: 8300000, guid: 43baa1032f275634da66f7e8fa68ca93, type: 3}
+    clip: {fileID: 8300000, guid: a0bd4c2a3ed9f984d9789cd4fa23eaf9, type: 3}
     volume: 1
     pitch: 1
     loop: 1
