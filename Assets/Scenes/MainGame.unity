@@ -1866,8 +1866,8 @@ GameObject:
   - component: {fileID: 390763558}
   - component: {fileID: 390763557}
   - component: {fileID: 390763556}
-  - component: {fileID: 390763555}
   - component: {fileID: 390763559}
+  - component: {fileID: 390763560}
   m_Layer: 5
   m_Name: cebolla
   m_TagString: Untagged
@@ -1895,18 +1895,6 @@ RectTransform:
   m_AnchoredPosition: {x: 511, y: -112}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &390763555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 390763553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c60344af68200e4f8c60b7532537d45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Cebolla
 --- !u!114 &390763556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1971,6 +1959,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InitialTransform
   initialParent: {fileID: 0}
   initialPosition: {x: 0, y: 0}
+--- !u!114 &390763560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390763553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55128ae7460db2a4e9a6cfd3303e6b0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ingredient
+  type: 4
 --- !u!1 &403835420
 GameObject:
   m_ObjectHideFlags: 0
@@ -2812,8 +2813,8 @@ GameObject:
   - component: {fileID: 638936405}
   - component: {fileID: 638936404}
   - component: {fileID: 638936403}
-  - component: {fileID: 638936402}
   - component: {fileID: 638936406}
+  - component: {fileID: 638936407}
   m_Layer: 5
   m_Name: sillao
   m_TagString: Untagged
@@ -2841,18 +2842,6 @@ RectTransform:
   m_AnchoredPosition: {x: 246, y: 314}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &638936402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 638936400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a20db4a4476027843a3c6af392a4e81b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Sillao
 --- !u!114 &638936403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2917,6 +2906,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InitialTransform
   initialParent: {fileID: 0}
   initialPosition: {x: 0, y: 0}
+--- !u!114 &638936407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638936400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55128ae7460db2a4e9a6cfd3303e6b0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ingredient
+  type: 5
 --- !u!1 &677354759
 GameObject:
   m_ObjectHideFlags: 0
@@ -5249,8 +5251,8 @@ GameObject:
   - component: {fileID: 1073867443}
   - component: {fileID: 1073867442}
   - component: {fileID: 1073867441}
-  - component: {fileID: 1073867440}
   - component: {fileID: 1073867444}
+  - component: {fileID: 1073867445}
   m_Layer: 5
   m_Name: arroz
   m_TagString: Untagged
@@ -5278,18 +5280,6 @@ RectTransform:
   m_AnchoredPosition: {x: -420, y: 86}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1073867440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1073867438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8836c1c158ebe354c9bc18cf6e6f80ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Arroz
 --- !u!114 &1073867441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5354,6 +5344,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InitialTransform
   initialParent: {fileID: 0}
   initialPosition: {x: 0, y: 0}
+--- !u!114 &1073867445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1073867438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55128ae7460db2a4e9a6cfd3303e6b0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ingredient
+  type: 1
 --- !u!1 &1081953069
 GameObject:
   m_ObjectHideFlags: 0
@@ -5845,6 +5848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SeleccionActual
   platoSeleccionado: {fileID: 0}
   bebidaSeleccionada: 0
+  tieneBebidaSeleccionada: 0
   cremasSeleccionadas: 
 --- !u!4 &1153987660
 Transform:
@@ -6816,8 +6820,8 @@ GameObject:
   - component: {fileID: 1248091843}
   - component: {fileID: 1248091842}
   - component: {fileID: 1248091841}
-  - component: {fileID: 1248091840}
   - component: {fileID: 1248091844}
+  - component: {fileID: 1248091845}
   m_Layer: 5
   m_Name: huevo
   m_TagString: Untagged
@@ -6845,18 +6849,6 @@ RectTransform:
   m_AnchoredPosition: {x: -503, y: -114}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1248091840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248091838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24c6f4d79f7954746a669b86df39731a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Huevo
 --- !u!114 &1248091841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6921,6 +6913,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InitialTransform
   initialParent: {fileID: 0}
   initialPosition: {x: 0, y: 0}
+--- !u!114 &1248091845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248091838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55128ae7460db2a4e9a6cfd3303e6b0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ingredient
+  type: 3
 --- !u!1 &1269242262
 GameObject:
   m_ObjectHideFlags: 0
@@ -7199,6 +7204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ClientePedido
   pedido:
     plato: 0
+    pideBebida: 1
     bebida: 0
     cremas: 
   ui: {fileID: 1302717923}
@@ -8133,8 +8139,8 @@ GameObject:
   - component: {fileID: 1530560168}
   - component: {fileID: 1530560167}
   - component: {fileID: 1530560166}
-  - component: {fileID: 1530560165}
   - component: {fileID: 1530560169}
+  - component: {fileID: 1530560170}
   m_Layer: 5
   m_Name: pollo trozo
   m_TagString: Untagged
@@ -8162,18 +8168,6 @@ RectTransform:
   m_AnchoredPosition: {x: 472, y: 106}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1530560165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1530560163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aab88bcacb0712d4ebc6a3df2fd88b45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PolloTrozos
 --- !u!114 &1530560166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8238,6 +8232,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InitialTransform
   initialParent: {fileID: 0}
   initialPosition: {x: 0, y: 0}
+--- !u!114 &1530560170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530560163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55128ae7460db2a4e9a6cfd3303e6b0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ingredient
+  type: 2
 --- !u!1 &1552138881
 GameObject:
   m_ObjectHideFlags: 0
@@ -8427,6 +8434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ClientePedido
   pedido:
     plato: 0
+    pideBebida: 1
     bebida: 0
     cremas: 
   ui: {fileID: 1556569553}
