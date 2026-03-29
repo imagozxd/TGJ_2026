@@ -1490,7 +1490,7 @@ RectTransform:
   m_GameObject: {fileID: 317842156}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.26, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1382318721}
@@ -2395,6 +2395,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &451869309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 451869310}
+  m_Layer: 5
+  m_Name: offset_cliente3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &451869310
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451869309}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1382318721}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 238, y: 48}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &468699778
 GameObject:
   m_ObjectHideFlags: 0
@@ -3851,7 +3886,7 @@ MonoBehaviour:
   fueEntregado: 0
   tipo: 1
   "tama\xF1o": 1
-  spriteAsignado: {fileID: 0}
+  spriteAsignado: {fileID: 2989103922813710987, guid: e899b66bce92744458096a618a40cb45, type: 3}
 --- !u!225 &777746453
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4079,7 +4114,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -168, y: 48}
+  m_AnchoredPosition: {x: -264, y: 48}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &839776303
@@ -4619,7 +4654,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CremaItem
   fueEntregado: 0
   tipo: 0
-  spriteAsignado: {fileID: 0}
+  spriteAsignado: {fileID: -170903420460904435, guid: 5b8d15d8e2ff83442b2918a601d0d7ac, type: 3}
 --- !u!225 &981708473
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5773,7 +5808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CremaItem
   fueEntregado: 0
   tipo: 2
-  spriteAsignado: {fileID: 0}
+  spriteAsignado: {fileID: 3320503786874268963, guid: c1aeddfcc62e4754a81560227743d99f, type: 3}
 --- !u!225 &1127995982
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -7491,7 +7526,7 @@ MonoBehaviour:
   fueEntregado: 0
   tipo: 0
   "tama\xF1o": 2
-  spriteAsignado: {fileID: 0}
+  spriteAsignado: {fileID: 2595689268838402427, guid: a5c07ee575c91434da354e1de2dc318f, type: 3}
 --- !u!225 &1340215905
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -7962,6 +7997,7 @@ RectTransform:
   m_Children:
   - {fileID: 814545813}
   - {fileID: 1814043312}
+  - {fileID: 451869310}
   m_Father: {fileID: 317842157}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -7982,7 +8018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8062,7 +8098,7 @@ MonoBehaviour:
   fueEntregado: 0
   tipo: 2
   "tama\xF1o": 1
-  spriteAsignado: {fileID: 0}
+  spriteAsignado: {fileID: 2759298844358750040, guid: f5f00b15593715443a3e432cd87e93a2, type: 3}
 --- !u!225 &1440209810
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -9117,7 +9153,7 @@ MonoBehaviour:
   fueEntregado: 0
   tipo: 0
   "tama\xF1o": 0
-  spriteAsignado: {fileID: 0}
+  spriteAsignado: {fileID: 7124980949072096933, guid: 8bc830e0720c1a14582ef1fc8f9a6dd1, type: 3}
 --- !u!225 &1742698284
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -9447,7 +9483,7 @@ MonoBehaviour:
   fueEntregado: 0
   tipo: 2
   "tama\xF1o": 2
-  spriteAsignado: {fileID: 0}
+  spriteAsignado: {fileID: 416343582489371215, guid: a9c406fc5eef23f4ca546e36b7d675db, type: 3}
 --- !u!225 &1775401005
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -9717,7 +9753,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 181, y: 48}
+  m_AnchoredPosition: {x: -5, y: 48}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1818971927
@@ -10268,7 +10304,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CremaItem
   fueEntregado: 0
   tipo: 1
-  spriteAsignado: {fileID: 0}
+  spriteAsignado: {fileID: -646228422259235597, guid: 5a43e125b44faec44944d9e98ec0b37d, type: 3}
 --- !u!225 &1955109877
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -10799,7 +10835,7 @@ MonoBehaviour:
   fueEntregado: 0
   tipo: 2
   "tama\xF1o": 0
-  spriteAsignado: {fileID: 0}
+  spriteAsignado: {fileID: 99482491403551045, guid: 43876b68167734f4eb6e64d37a69e03f, type: 3}
 --- !u!225 &2068981076
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -10952,7 +10988,7 @@ MonoBehaviour:
   fueEntregado: 0
   tipo: 0
   "tama\xF1o": 1
-  spriteAsignado: {fileID: 0}
+  spriteAsignado: {fileID: 8168832954381657252, guid: 597879ca8bf84a24a9e61517a9d2acd5, type: 3}
 --- !u!225 &2074297611
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -11243,7 +11279,7 @@ MonoBehaviour:
   fueEntregado: 0
   tipo: 1
   "tama\xF1o": 0
-  spriteAsignado: {fileID: 0}
+  spriteAsignado: {fileID: 4076995922654269957, guid: c433a3382f2ba6c41825ed5e30ac8b12, type: 3}
 --- !u!225 &2098545141
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -11423,7 +11459,7 @@ MonoBehaviour:
   fueEntregado: 0
   tipo: 1
   "tama\xF1o": 2
-  spriteAsignado: {fileID: 0}
+  spriteAsignado: {fileID: -7948243571769359146, guid: df35984c42c9daa42a3b15c01b73d0c8, type: 3}
 --- !u!225 &2145429065
 CanvasGroup:
   m_ObjectHideFlags: 0
