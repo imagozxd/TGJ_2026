@@ -19,9 +19,15 @@ public class ClientePedido : MonoBehaviour
 
         pedido.pideBebida = Random.Range(0, 2) == 1;
         if (pedido.pideBebida)
+        {
             pedido.bebida = (Bebida)Random.Range(0, 3);
+            pedido.tamañoBebida = (TamañoBebida)Random.Range(0, 3);
+        }
         else
+        {
             pedido.bebida = default;
+            pedido.tamañoBebida = default;
+        }
 
         int cantidad = Random.Range(0, 3);
         if (cantidad == 0)

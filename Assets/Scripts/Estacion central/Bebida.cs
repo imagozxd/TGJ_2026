@@ -7,6 +7,13 @@ public enum Bebida
     Sprite
 }
 
+public enum TamañoBebida
+{
+    Chico,
+    Mediano,
+    Grande
+}
+
 public enum Crema
 {
     Mayo,

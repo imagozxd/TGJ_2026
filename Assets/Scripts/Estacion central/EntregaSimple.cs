@@ -71,6 +71,9 @@ public class EntregaSimple : MonoBehaviour
 
             if (cliente.pedido.bebida != sel.bebidaSeleccionada)
                 return false;
+
+            if (cliente.pedido.tamañoBebida != sel.tamañoBebidaSeleccionada)
+                return false;
         }
 
         // cremas: debe contener todas las del pedido
