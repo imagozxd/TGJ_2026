@@ -11,8 +11,8 @@ public class PlatoFinalChaufa : MonoBehaviour, IDropHandler
 
         if (obj == null) return;
 
-        Chaufa chaufa = obj.GetComponent<Chaufa>();
-        if (chaufa == null) return;
+        Ingredient ingredient = obj.GetComponent<Ingredient>();
+        if (ingredient == null || ingredient.type != IngredientType.Chaufa) return;
 
         Debug.Log("Drop Chaufa detectado");
 
@@ -34,7 +34,7 @@ public class PlatoFinalChaufa : MonoBehaviour, IDropHandler
         // ocultar chaufa listo
         obj.SetActive(false);
 
-        // reset de la estación
+        // reset de la estaciï¿½n
         estacion.ResetEstacion();
     }
 }

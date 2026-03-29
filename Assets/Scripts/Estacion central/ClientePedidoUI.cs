@@ -28,21 +28,37 @@ public class ClientePedidoUI : MonoBehaviour
         var pedido = cliente.pedido;
 
         // plato
-        iconoPlato.sprite = spritesPlato[(int)pedido.plato];
 
-        // bebida
-        iconoBebida.sprite = spritesBebida[(int)pedido.bebida];
+        if (iconoPlato != null && spritesPlato != null && (int)pedido.plato >= 0 && (int)pedido.plato < spritesPlato.Length)
+            iconoPlato.sprite = spritesPlato[(int)pedido.plato];
 
-        // limpiar cremas anteriores
-        foreach (Transform child in contenedorCremas)
-            Destroy(child.gameObject);
-
-        // crear cremas
-        foreach (var crema in pedido.cremas)
+        if (iconoBebida != null)
         {
-            GameObject go = Instantiate(cremaPrefab, contenedorCremas);
-            Image img = go.GetComponent<Image>();
-            img.sprite = spritesCremas[(int)crema];
+            iconoBebida.gameObject.SetActive(pedido.pideBebida);
+            if (pedido.pideBebida && spritesBebida != null && (int)pedido.bebida >= 0 && (int)pedido.bebida < spritesBebida.Length)
+                iconoBebida.sprite = spritesBebida[(int)pedido.bebida];
+        }
+
+        if (contenedorCremas != null)
+        {
+            bool pideCremas = pedido.cremas != null && pedido.cremas.Count > 0;
+            contenedorCremas.gameObject.SetActive(pideCremas);
+
+            // limpiar cremas anteriores
+            foreach (Transform child in contenedorCremas)
+                Destroy(child.gameObject);
+
+            // crear cremas
+            if (pideCremas)
+            {
+                foreach (var crema in pedido.cremas)
+                {
+                    GameObject go = Instantiate(cremaPrefab, contenedorCremas);
+                    Image img = go.GetComponent<Image>();
+                    if (img != null && spritesCremas != null && (int)crema >= 0 && (int)crema < spritesCremas.Length)
+                        img.sprite = spritesCremas[(int)crema];
+                }
+            }
         }
 
         Debug.Log("UI Pedido actualizada");

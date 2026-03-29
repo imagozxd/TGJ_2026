@@ -33,7 +33,7 @@ public class EntregaController : MonoBehaviour
         {
             Debug.Log("Entrega incorrecta");
 
-            // penalización
+            // penalizaciï¿½n
             StartCoroutine(Penalizar(cliente));
         }
     }

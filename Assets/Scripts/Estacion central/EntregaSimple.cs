@@ -12,7 +12,7 @@ public class EntregaSimple : MonoBehaviour
     {
         var sel = SeleccionActual.Instance;
 
-        // validaciones básicas
+        // validaciones bï¿½sicas
         if (cliente == null || cliente.pedido == null)
         {
             Debug.Log("No hay cliente o pedido");
@@ -43,14 +43,14 @@ public class EntregaSimple : MonoBehaviour
             // limpiar cliente (no destruir slot)
             cliente.pedido = null;
 
-            // opcional: regenerar otro pedido o dejar vacío
+            // opcional: regenerar otro pedido o dejar vacï¿½o
             // cliente.GenerarPedidoRandom();
         }
         else
         {
             Debug.Log("Entrega incorrecta");
 
-            // penalización (bloquea cliente unos segundos)
+            // penalizaciï¿½n (bloquea cliente unos segundos)
             StartCoroutine(Penalizar());
         }
 
@@ -64,14 +64,23 @@ public class EntregaSimple : MonoBehaviour
             return false;
 
         // bebida
-        if (cliente.pedido.bebida != sel.bebidaSeleccionada)
-            return false;
+        if (cliente.pedido.pideBebida)
+        {
+            if (!sel.tieneBebidaSeleccionada)
+                return false;
+
+            if (cliente.pedido.bebida != sel.bebidaSeleccionada)
+                return false;
+        }
 
         // cremas: debe contener todas las del pedido
-        foreach (var c in cliente.pedido.cremas)
+        if (cliente.pedido.cremas != null)
         {
-            if (!sel.cremasSeleccionadas.Contains(c))
-                return false;
+            foreach (var c in cliente.pedido.cremas)
+            {
+                if (!sel.cremasSeleccionadas.Contains(c))
+                    return false;
+            }
         }
 
         return true;
@@ -79,10 +88,10 @@ public class EntregaSimple : MonoBehaviour
 
     IEnumerator Penalizar()
     {
-        // aquí puedes bloquear interacción visualmente si quieres
+        // aquï¿½ puedes bloquear interacciï¿½n visualmente si quieres
         yield return new WaitForSeconds(tiempoPenalizacion);
 
-        // el cliente se va después del error
+        // el cliente se va despuï¿½s del error
         if (cliente != null)
         {
             cliente.pedido = null;

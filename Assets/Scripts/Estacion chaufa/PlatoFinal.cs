@@ -7,16 +7,18 @@ public class PlatoFinal : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
-        Chaufa chaufa = eventData.pointerDrag.GetComponent<Chaufa>();
+        GameObject obj = eventData.pointerDrag;
+        if (obj == null) return;
 
-        if (chaufa == null) return;
+        Ingredient ingredient = obj.GetComponent<Ingredient>();
+        if (ingredient == null || ingredient.type != IngredientType.Chaufa) return;
 
-        chaufa.transform.SetParent(transform, false);
-        chaufa.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+        obj.transform.SetParent(transform, false);
+        obj.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
 
         Debug.Log(" Chaufa servido");
 
-        //  reset SOLO esta estación
+        //  reset SOLO esta estaciï¿½n
         estacion.ResetEstacion();
     }
 }
