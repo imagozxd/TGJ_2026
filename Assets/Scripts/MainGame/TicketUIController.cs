@@ -20,15 +20,15 @@ public class TicketUICOntroller : MonoBehaviour
     [SerializeField] private GameObject ketchupGO;
 
     [Header("Sprites")]
-    [SerializeField] private Texture coca1LTSPR;
-    [SerializeField] private Texture cocaMediaSPR;
-    [SerializeField] private Texture cocaPersonalSPR;
-    [SerializeField] private Texture inka1LTSPR;
-    [SerializeField] private Texture inkaMediaSPR;
-    [SerializeField] private Texture inkaPersonalSPR;
-    [SerializeField] private Texture sprite1LTSPR;
-    [SerializeField] private Texture spriteMediaSPR;
-    [SerializeField] private Texture spritePersonalSPR;
+    [SerializeField] private Sprite coca1LTSPR;
+    [SerializeField] private Sprite cocaMediaSPR;
+    [SerializeField] private Sprite cocaPersonalSPR;
+    [SerializeField] private Sprite inka1LTSPR;
+    [SerializeField] private Sprite inkaMediaSPR;
+    [SerializeField] private Sprite inkaPersonalSPR;
+    [SerializeField] private Sprite sprite1LTSPR;
+    [SerializeField] private Sprite spriteMediaSPR;
+    [SerializeField] private Sprite spritePersonalSPR;
 
     private ClientePedido clientePedido;
 
@@ -59,19 +59,19 @@ public class TicketUICOntroller : MonoBehaviour
             switch (clientePedido.pedido.bebida)
             {
                 case Bebida.Coca:
-                    gaseosa1LTGO.GetComponentInChildren<RawImage>().texture = coca1LTSPR;
-                    gaseosaMediaGO.GetComponentInChildren<RawImage>().texture = cocaMediaSPR;
-                    gaseosaPersonalGO.GetComponentInChildren<RawImage>().texture = cocaPersonalSPR;
+                    gaseosa1LTGO.GetComponent<Image>().sprite = coca1LTSPR;
+                    gaseosaMediaGO.GetComponent<Image>().sprite = cocaMediaSPR;
+                    gaseosaPersonalGO.GetComponent<Image>().sprite = cocaPersonalSPR;
                     break;
                 case Bebida.Inca:
-                    gaseosa1LTGO.GetComponentInChildren<RawImage>().texture = inka1LTSPR;
-                    gaseosaMediaGO.GetComponentInChildren<RawImage>().texture = inkaMediaSPR;
-                    gaseosaPersonalGO.GetComponentInChildren<RawImage>().texture = inkaPersonalSPR;
+                    gaseosa1LTGO.GetComponent<Image>().sprite = inka1LTSPR;
+                    gaseosaMediaGO.GetComponent<Image>().sprite = inkaMediaSPR;
+                    gaseosaPersonalGO.GetComponent<Image>().sprite = inkaPersonalSPR;
                     break;
                 case Bebida.Sprite:
-                    gaseosa1LTGO.GetComponentInChildren<RawImage>().texture = sprite1LTSPR;
-                    gaseosaMediaGO.GetComponentInChildren<RawImage>().texture = spriteMediaSPR;
-                    gaseosaPersonalGO.GetComponentInChildren<RawImage>().texture = spritePersonalSPR;
+                    gaseosa1LTGO.GetComponent<Image>().sprite = sprite1LTSPR;
+                    gaseosaMediaGO.GetComponent<Image>().sprite = spriteMediaSPR;
+                    gaseosaPersonalGO.GetComponent<Image>().sprite = spritePersonalSPR;
                     break;
             }
 

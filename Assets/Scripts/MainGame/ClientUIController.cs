@@ -10,7 +10,14 @@ public class ClientUIController : MonoBehaviour
 
     public void Init(ClientePedido newClientePedido)
     {
+        Debug.Log($"[ClientUIController] Mostrando cliente de tipo {newClientePedido.cliente.tipo}");
+
         clientePedido = newClientePedido;
+
+        susyDiazGO.SetActive(false);
+        dinaGO.SetActive(false);
+        zumbaGO.SetActive(false);
+
         switch (newClientePedido.cliente.tipo)
         {
             case TipoCliente.SusyDiaz:
