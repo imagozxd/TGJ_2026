@@ -42,14 +42,14 @@ public class Pollo : MonoBehaviour
     {
         isCooking = false;
 
-        //  importante: si ya estaba cocido, se queda así
+        //  importante: si ya estaba cocido, se queda asï¿½
         if (estado == Estado.Cocinando)
         {
             estado = Estado.Crudo;
             image.sprite = crudo;
         }
 
-        Debug.Log("Cocción detenida");
+        Debug.Log("Cocciï¿½n detenida");
     }
 
     private void Update()
