@@ -88,5 +88,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b11d30e9b88254f853c3208bdeacd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClienteMover
+  indicatorIMG: {fileID: 4939686992421875769}
+  susyDiazFaceSPR: {fileID: -6744247781483948478, guid: 615f1431511d9e642b9a9252a5bdf27f, type: 3}
+  dinaFaceSPR: {fileID: -2044281116776522286, guid: 15c95594c199cb1489021dc55692a35b, type: 3}
+  zumbaFaceSPR: {fileID: -369883082446596963, guid: e8e3c30f998f68340a675b5384166686, type: 3}
   speed: 0
   enLocal: 0
