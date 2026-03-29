@@ -3,7 +3,9 @@ using UnityEngine.UI;
 
 public class TicketUICOntroller : MonoBehaviour
 {
-    [SerializeField] private GameObject checkGO;
+    [SerializeField] private Image clientFaceIMG;
+    [SerializeField] private Image checkIMG;
+
     [Header("Bebidas")]
     [SerializeField] private GameObject gaseosa1LTGO;
     [SerializeField] private GameObject gaseosaMediaGO;
@@ -29,18 +31,39 @@ public class TicketUICOntroller : MonoBehaviour
     [SerializeField] private Sprite sprite1LTSPR;
     [SerializeField] private Sprite spriteMediaSPR;
     [SerializeField] private Sprite spritePersonalSPR;
+    [SerializeField] private Sprite checkSPR;
+    [SerializeField] private Sprite noCheckSPR;
+
+
+    [Space]
+    [SerializeField] private Sprite susyDiazFaceSPR;
+    [SerializeField] private Sprite dinaFaceSPR;
+    [SerializeField] private Sprite zumbaFaceSPR;
 
     private ClientePedido clientePedido;
 
-    void Start()
-    {
-        checkGO.SetActive(false);
-    }
 
     public void Init(ClientePedido newClientePedido)
     {
         clientePedido = newClientePedido;
-        checkGO.SetActive(false);
+        checkIMG.sprite = noCheckSPR;
+
+        if (newClientePedido.cliente.tipo == TipoCliente.SusyDiaz)
+        {
+            clientFaceIMG.sprite = susyDiazFaceSPR;
+        }
+        else if (newClientePedido.cliente.tipo == TipoCliente.Dina)
+        {
+            clientFaceIMG.sprite = dinaFaceSPR;
+        }
+        else if (newClientePedido.cliente.tipo == TipoCliente.Zumba)
+        {
+            clientFaceIMG.sprite = zumbaFaceSPR;
+        }
+        else
+        {
+            Debug.LogWarning($"[TicketUICOntroller] Tipo de cliente desconocido: {newClientePedido.cliente.tipo}");
+        }
 
         if (clientePedido.pedido.plato == TipoPlato.Pollo)
         {
@@ -124,7 +147,7 @@ public class TicketUICOntroller : MonoBehaviour
 
     public void MarkAsReady()
     {
-        checkGO.SetActive(true);
+        checkIMG.sprite = checkSPR;
     }
 
 
