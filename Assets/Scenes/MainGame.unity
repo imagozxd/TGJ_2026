@@ -313,7 +313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: a5c07ee575c91434da354e1de2dc318f, type: 3}
+  m_Texture: {fileID: 2800000, guid: a9c406fc5eef23f4ca546e36b7d675db, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2044,7 +2044,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &274257219
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2298,7 +2298,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &335526895
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3851,7 +3851,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 43876b68167734f4eb6e64d37a69e03f, type: 3}
+  m_Texture: {fileID: 2800000, guid: e899b66bce92744458096a618a40cb45, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -5719,7 +5719,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &829726048
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6318,7 +6318,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 597879ca8bf84a24a9e61517a9d2acd5, type: 3}
+  m_Texture: {fileID: 2800000, guid: e899b66bce92744458096a618a40cb45, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -9927,7 +9927,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1310457722
 RectTransform:
   m_ObjectHideFlags: 0
