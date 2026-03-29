@@ -6,70 +6,62 @@ public class SliderCoccion : MonoBehaviour
 
     public int ciclosNecesarios = 3;
     private int ciclosActuales = 0;
-
     private bool fueACero = false;
 
-    public GameObject chaufaPreparado;
+    // objeto UI que se activarï¿½ al terminar
+    public GameObject chaufaListo;
 
     public void OnSliderChanged(float value)
     {
-        Debug.Log("Slider: " + value);
-
         if (!sarten.listoParaCocinar) return;
 
-        // detectar que llegó a 0
         if (value <= 0.1f && !fueACero)
         {
             fueACero = true;
-            Debug.Log(" Llegó a 0");
         }
 
-        // detectar que llegó a 1 después
         if (value >= 0.9f && fueACero)
         {
             ciclosActuales++;
             fueACero = false;
-
-            Debug.Log($" Ciclo: {ciclosActuales}/{ciclosNecesarios}");
         }
 
         if (ciclosActuales >= ciclosNecesarios)
         {
-            Debug.Log(" CHAUFA LISTO");
-
             sarten.listoParaCocinar = false;
 
-            ActivarChaufa();   
+            ActivarChaufaListo();
             OnCoccionCompleta();
         }
     }
 
-    void ActivarChaufa()
+    void ActivarChaufaListo()
     {
-        if (chaufaPreparado == null)
+        if (chaufaListo == null)
         {
-            Debug.LogError(" Chaufa no asignado");
+            Debug.LogError("chaufaListo no asignado");
             return;
         }
 
-        chaufaPreparado.SetActive(true);
+        chaufaListo.SetActive(true);
 
-        Debug.Log(" Chaufa activado");
+        // opcional: asegurarse que sea arrastrable
+        var cg = chaufaListo.GetComponent<CanvasGroup>();
+        if (cg != null)
+        {
+            cg.blocksRaycasts = true;
+            cg.interactable = true;
+            cg.alpha = 1f;
+        }
     }
 
     void OnCoccionCompleta()
     {
-        Debug.Log(" POPUP AQUÍ");
+        Debug.Log("Chaufa listo para entregar");
     }
 
-    public bool EstaListo()
-    {
-        return ciclosActuales >= ciclosNecesarios;
-    }
     public void ResetCoccion()
     {
-        Debug.Log(" Reset Slider");
-
         ciclosActuales = 0;
         fueACero = false;
     }

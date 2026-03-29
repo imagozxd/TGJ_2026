@@ -6,8 +6,35 @@ public class EstacionPollo : MonoBehaviour
     public Horno horno;
     public Barras barras;
 
+    // referencia al mostrador
+    public Mostrador mostrador;
+
+    // prefab visual del pollo para el mostrador
+    public GameObject polloPrefabMostrador;
+
     // Todos los objetos que deben resetearse (fosforo, barras, pollo, etc.)
     public List<GameObject> objetosReset = new List<GameObject>();
+
+    // llamado cuando el pollo está listo para enviarse
+    public void EnviarPolloAlMostrador()
+    {
+        if (mostrador == null)
+        {
+
+            Debug.LogError("Mostrador no asignado");
+            return;
+        }
+
+        if (polloPrefabMostrador == null)
+        {
+            Debug.LogError("Prefab de pollo no asignado");
+            return;
+        }
+
+        mostrador.AgregarPlato(polloPrefabMostrador, TipoPlato.Pollo);
+
+        Debug.Log("Pollo enviado al mostrador");
+    }
 
     public void ResetEstacion()
     {
@@ -17,7 +44,7 @@ public class EstacionPollo : MonoBehaviour
         if (horno != null)
             horno.ResetHorno();
 
-        // Reset de pollos
+        // Reset de pollos en barras
         if (barras != null)
             barras.ResetBarras();
 
@@ -26,7 +53,7 @@ public class EstacionPollo : MonoBehaviour
         {
             if (obj == null) continue;
 
-            // Clave para objetos desactivados (como fosforo)
+            // reactivar objetos desactivados (ej: fosforo)
             obj.SetActive(true);
 
             InitialTransform init = obj.GetComponent<InitialTransform>();
@@ -35,17 +62,22 @@ public class EstacionPollo : MonoBehaviour
             {
                 RectTransform rect = obj.GetComponent<RectTransform>();
 
+                // volver a su padre original
                 obj.transform.SetParent(init.initialParent, false);
+
+                // restaurar posición inicial
                 rect.anchoredPosition = init.initialPosition;
+
+                // asegurar orden visual
                 obj.transform.SetAsLastSibling();
             }
 
-            // Reactivar drag
+            // reactivar drag
             var drag = obj.GetComponent<UIDragDrop>();
             if (drag != null)
                 drag.enabled = true;
 
-            // Reactivar interacción
+            // reactivar interacción
             var cg = obj.GetComponent<CanvasGroup>();
             if (cg != null)
             {

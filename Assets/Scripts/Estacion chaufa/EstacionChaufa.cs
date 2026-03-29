@@ -4,29 +4,57 @@ public class EstacionChaufa : MonoBehaviour
 {
     public Sarten sarten;
     public SliderCoccion slider;
-    public GameObject chaufaPreparado;
-    
+
+    public Mostrador mostrador;
+    public GameObject chaufaPrefabMostrador;
+
+    // objetos a resetear (ingredientes, etc.)
+    public GameObject[] objetosReset;
+
+    // referencia al chaufa listo para ocultarlo en reset
+    public GameObject chaufaListo;
 
     public void ResetEstacion()
     {
-        Debug.Log(" Reset Estación Chaufa");
+        Debug.Log("Reset Estacion Chaufa");
 
-        // reset ingredientes (sartén)
         if (sarten != null)
             sarten.ResetEstacion();
 
-        // reset slider
         if (slider != null)
-        {
             slider.ResetCoccion();
 
-            var uiSlider = slider.GetComponent<UnityEngine.UI.Slider>();
-            if (uiSlider != null)
-                uiSlider.value = 0.5f;
-        }
+        // ocultar chaufa listo
+        if (chaufaListo != null)
+            chaufaListo.SetActive(false);
 
-        // ocultar chaufa preparado
-        if (chaufaPreparado != null)
-            chaufaPreparado.SetActive(false);
+        // reset básico de objetos (posición + interacción)
+        foreach (var obj in objetosReset)
+        {
+            if (obj == null) continue;
+
+            obj.SetActive(true);
+
+            var init = obj.GetComponent<InitialTransform>();
+            if (init != null)
+            {
+                var rect = obj.GetComponent<RectTransform>();
+                obj.transform.SetParent(init.initialParent, false);
+                rect.anchoredPosition = init.initialPosition;
+                obj.transform.SetAsLastSibling();
+            }
+
+            var cg = obj.GetComponent<CanvasGroup>();
+            if (cg != null)
+            {
+                cg.blocksRaycasts = true;
+                cg.interactable = true;
+                cg.alpha = 1f;
+            }
+
+            var drag = obj.GetComponent<UIDragDrop>();
+            if (drag != null)
+                drag.enabled = true;
+        }
     }
 }
