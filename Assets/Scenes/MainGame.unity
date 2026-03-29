@@ -1253,8 +1253,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 699, y: 84}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -697, y: -57}
+  m_SizeDelta: {x: 311.4293, y: 172.8495}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &267230036
 MonoBehaviour:
@@ -1271,9 +1271,9 @@ MonoBehaviour:
   estado: 0
   tiempoCoccion: 3
   tiempoQuemado: 7
-  crudo: {fileID: 21300000, guid: cb55206a7ca130348a6b576811abd1a6, type: 3}
-  cocido: {fileID: 21300000, guid: 53b6aa39f41834148be49bbea03dc208, type: 3}
-  quemado: {fileID: 21300000, guid: 5be4fe5dc97e02e4cbc3cdafe18d50cf, type: 3}
+  crudo: {fileID: -1336181327845718645, guid: 0558de61b317c4f4198e5c19e7837b2d, type: 3}
+  cocido: {fileID: 7476883630603231043, guid: c97f6a36d9bec9b4983b7a0dabb1775b, type: 3}
+  quemado: {fileID: -1733152743345551990, guid: af65f2801daf0ee4ea6a9886bae22c4e, type: 3}
 --- !u!114 &267230038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1299,7 +1299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.8604186, b: 0.4584905, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1386,7 +1386,7 @@ GameObject:
   - component: {fileID: 302867719}
   - component: {fileID: 302867716}
   m_Layer: 5
-  m_Name: 'horno '
+  m_Name: brasa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1409,8 +1409,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3, y: -205}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 12.9417, y: 235.71}
+  m_SizeDelta: {x: 581.0814, y: 223.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &302867716
 MonoBehaviour:
@@ -1439,7 +1439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.0627451}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1490,7 +1490,7 @@ RectTransform:
   m_GameObject: {fileID: 317842156}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2497237, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1382318721}
@@ -1498,7 +1498,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 443, y: -385}
+  m_AnchoredPosition: {x: 443, y: -390}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &317842158
@@ -1516,7 +1516,6 @@ MonoBehaviour:
   slots:
   - {fileID: 814545813}
   - {fileID: 1814043312}
-  - {fileID: 2098762422}
 --- !u!1 &338215319
 GameObject:
   m_ObjectHideFlags: 0
@@ -3852,7 +3851,7 @@ MonoBehaviour:
   fueEntregado: 0
   tipo: 1
   "tama\xF1o": 1
-  spriteAsignado: {fileID: 2989103922813710987, guid: e899b66bce92744458096a618a40cb45, type: 3}
+  spriteAsignado: {fileID: 0}
 --- !u!225 &777746453
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4080,7 +4079,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -253, y: 48}
+  m_AnchoredPosition: {x: -168, y: 48}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &839776303
@@ -4620,7 +4619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CremaItem
   fueEntregado: 0
   tipo: 0
-  spriteAsignado: {fileID: -170903420460904435, guid: 5b8d15d8e2ff83442b2918a601d0d7ac, type: 3}
+  spriteAsignado: {fileID: 0}
 --- !u!225 &981708473
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -5774,7 +5773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CremaItem
   fueEntregado: 0
   tipo: 2
-  spriteAsignado: {fileID: 3320503786874268963, guid: c1aeddfcc62e4754a81560227743d99f, type: 3}
+  spriteAsignado: {fileID: 0}
 --- !u!225 &1127995982
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -7492,7 +7491,7 @@ MonoBehaviour:
   fueEntregado: 0
   tipo: 0
   "tama\xF1o": 2
-  spriteAsignado: {fileID: 2595689268838402427, guid: a5c07ee575c91434da354e1de2dc318f, type: 3}
+  spriteAsignado: {fileID: 0}
 --- !u!225 &1340215905
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -7877,8 +7876,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -642, y: -91}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 620.52, y: -22.046}
+  m_SizeDelta: {x: 363.03, y: 187.0017}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1364616707
 MonoBehaviour:
@@ -7893,7 +7892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.3019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7963,7 +7962,6 @@ RectTransform:
   m_Children:
   - {fileID: 814545813}
   - {fileID: 1814043312}
-  - {fileID: 2098762422}
   m_Father: {fileID: 317842157}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -7984,7 +7982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8064,7 +8062,7 @@ MonoBehaviour:
   fueEntregado: 0
   tipo: 2
   "tama\xF1o": 1
-  spriteAsignado: {fileID: 2759298844358750040, guid: f5f00b15593715443a3e432cd87e93a2, type: 3}
+  spriteAsignado: {fileID: 0}
 --- !u!225 &1440209810
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -8699,8 +8697,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -312, y: -351}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -423.3, y: -91.5}
+  m_SizeDelta: {x: 120.6, y: 163.8483}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1603822864
 MonoBehaviour:
@@ -8727,7 +8725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7207546, g: 0.46821874, b: 0.14551082, a: 0.6117647}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8802,7 +8800,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: -341}
+  m_AnchoredPosition: {x: 1, y: -149}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1657165313
@@ -8831,7 +8829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9119,7 +9117,7 @@ MonoBehaviour:
   fueEntregado: 0
   tipo: 0
   "tama\xF1o": 0
-  spriteAsignado: {fileID: 7124980949072096933, guid: 8bc830e0720c1a14582ef1fc8f9a6dd1, type: 3}
+  spriteAsignado: {fileID: 0}
 --- !u!225 &1742698284
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -9449,7 +9447,7 @@ MonoBehaviour:
   fueEntregado: 0
   tipo: 2
   "tama\xF1o": 2
-  spriteAsignado: {fileID: 416343582489371215, guid: a9c406fc5eef23f4ca546e36b7d675db, type: 3}
+  spriteAsignado: {fileID: 0}
 --- !u!225 &1775401005
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -9719,7 +9717,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12, y: 48}
+  m_AnchoredPosition: {x: 181, y: 48}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1818971927
@@ -9761,8 +9759,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 287, y: -330}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 570, y: 267}
+  m_SizeDelta: {x: 307.2937, y: 34.8704}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1818971930
 MonoBehaviour:
@@ -9789,7 +9787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5898256, g: 0.61363953, b: 0.7056604, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10270,7 +10268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CremaItem
   fueEntregado: 0
   tipo: 1
-  spriteAsignado: {fileID: -646228422259235597, guid: 5a43e125b44faec44944d9e98ec0b37d, type: 3}
+  spriteAsignado: {fileID: 0}
 --- !u!225 &1955109877
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -10801,7 +10799,7 @@ MonoBehaviour:
   fueEntregado: 0
   tipo: 2
   "tama\xF1o": 0
-  spriteAsignado: {fileID: 99482491403551045, guid: 43876b68167734f4eb6e64d37a69e03f, type: 3}
+  spriteAsignado: {fileID: 0}
 --- !u!225 &2068981076
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -10954,7 +10952,7 @@ MonoBehaviour:
   fueEntregado: 0
   tipo: 0
   "tama\xF1o": 1
-  spriteAsignado: {fileID: 8168832954381657252, guid: 597879ca8bf84a24a9e61517a9d2acd5, type: 3}
+  spriteAsignado: {fileID: 0}
 --- !u!225 &2074297611
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -11245,7 +11243,7 @@ MonoBehaviour:
   fueEntregado: 0
   tipo: 1
   "tama\xF1o": 0
-  spriteAsignado: {fileID: 4076995922654269957, guid: c433a3382f2ba6c41825ed5e30ac8b12, type: 3}
+  spriteAsignado: {fileID: 0}
 --- !u!225 &2098545141
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -11308,41 +11306,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2098545138}
   m_CullTransparentMesh: 1
---- !u!1 &2098762421
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2098762422}
-  m_Layer: 5
-  m_Name: offset_cliente3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2098762422
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2098762421}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1382318721}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 222, y: 48}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2108183699
 GameObject:
   m_ObjectHideFlags: 0
@@ -11460,7 +11423,7 @@ MonoBehaviour:
   fueEntregado: 0
   tipo: 1
   "tama\xF1o": 2
-  spriteAsignado: {fileID: -7948243571769359146, guid: df35984c42c9daa42a3b15c01b73d0c8, type: 3}
+  spriteAsignado: {fileID: 0}
 --- !u!225 &2145429065
 CanvasGroup:
   m_ObjectHideFlags: 0
