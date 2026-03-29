@@ -28,7 +28,7 @@ public class MainMenuManager : MonoBehaviour
     }
 
     private void OnStartGameClicked() {
-        SceneManager.LoadScene("MainGame");
+        SceneManager.LoadScene("MScene");
     }
 
     private void OnTutorialClicked() {
