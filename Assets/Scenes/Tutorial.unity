@@ -176,15 +176,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Solo puedes juntar 3 platos preparados
+  m_text: '- Solo puedes juntar 3 platos preparados.
 
     - Tienes un tiempo determinado
-    para hacer los pedidos
+    para hacer los pedidos.
 
-    - Evita que se te junten clientes'
+    - Evita que se te junten clientes.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5c52ed591b5940b44b63d790312e8cd6, type: 2}
-  m_sharedMaterial: {fileID: -5072211611882568698, guid: 5c52ed591b5940b44b63d790312e8cd6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ccdf5daedd328344f915dbdbcdddcaad, type: 2}
+  m_sharedMaterial: {fileID: -1370986019675796104, guid: ccdf5daedd328344f915dbdbcdddcaad, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 8
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -320,8 +320,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Objetivos
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5c52ed591b5940b44b63d790312e8cd6, type: 2}
-  m_sharedMaterial: {fileID: -5072211611882568698, guid: 5c52ed591b5940b44b63d790312e8cd6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ccdf5daedd328344f915dbdbcdddcaad, type: 2}
+  m_sharedMaterial: {fileID: -1370986019675796104, guid: ccdf5daedd328344f915dbdbcdddcaad, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -351,7 +351,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -455,10 +455,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Completa los pedidos de los clientes que van llegando
+  m_text: Completa los pedidos de los clientes que van llegando.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5c52ed591b5940b44b63d790312e8cd6, type: 2}
-  m_sharedMaterial: {fileID: -5072211611882568698, guid: 5c52ed591b5940b44b63d790312e8cd6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ccdf5daedd328344f915dbdbcdddcaad, type: 2}
+  m_sharedMaterial: {fileID: -1370986019675796104, guid: ccdf5daedd328344f915dbdbcdddcaad, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -488,7 +488,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 8
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1144,10 +1144,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Arrastra y suelta elementos para preparar los distintos platos
+  m_text: Arrastra y suelta elementos para preparar los distintos platos.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5c52ed591b5940b44b63d790312e8cd6, type: 2}
-  m_sharedMaterial: {fileID: -5072211611882568698, guid: 5c52ed591b5940b44b63d790312e8cd6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ccdf5daedd328344f915dbdbcdddcaad, type: 2}
+  m_sharedMaterial: {fileID: -1370986019675796104, guid: ccdf5daedd328344f915dbdbcdddcaad, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1177,7 +1177,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 8
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1283,8 +1283,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tutorial
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5c52ed591b5940b44b63d790312e8cd6, type: 2}
-  m_sharedMaterial: {fileID: -5072211611882568698, guid: 5c52ed591b5940b44b63d790312e8cd6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ccdf5daedd328344f915dbdbcdddcaad, type: 2}
+  m_sharedMaterial: {fileID: -1370986019675796104, guid: ccdf5daedd328344f915dbdbcdddcaad, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1314,7 +1314,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1420,8 +1420,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Mec\xE1nica"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5c52ed591b5940b44b63d790312e8cd6, type: 2}
-  m_sharedMaterial: {fileID: -5072211611882568698, guid: 5c52ed591b5940b44b63d790312e8cd6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ccdf5daedd328344f915dbdbcdddcaad, type: 2}
+  m_sharedMaterial: {fileID: -1370986019675796104, guid: ccdf5daedd328344f915dbdbcdddcaad, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1451,7 +1451,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1755,8 +1755,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Advertencias
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5c52ed591b5940b44b63d790312e8cd6, type: 2}
-  m_sharedMaterial: {fileID: -5072211611882568698, guid: 5c52ed591b5940b44b63d790312e8cd6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ccdf5daedd328344f915dbdbcdddcaad, type: 2}
+  m_sharedMaterial: {fileID: -1370986019675796104, guid: ccdf5daedd328344f915dbdbcdddcaad, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1786,7 +1786,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2117,8 +2117,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tutorial
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5c52ed591b5940b44b63d790312e8cd6, type: 2}
-  m_sharedMaterial: {fileID: -5072211611882568698, guid: 5c52ed591b5940b44b63d790312e8cd6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ccdf5daedd328344f915dbdbcdddcaad, type: 2}
+  m_sharedMaterial: {fileID: -1370986019675796104, guid: ccdf5daedd328344f915dbdbcdddcaad, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2148,7 +2148,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
