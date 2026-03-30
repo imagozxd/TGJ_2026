@@ -71,11 +71,13 @@ public class UIScreenNavigator : MonoBehaviour
 
         if (!IsValid(next))
         {
-            Debug.Log($"[Navigator] Movimiento inválido: {next}");
+            Debug.Log($"[Navigator] Movimiento invï¿½lido: {next}");
             return;
         }
 
         currentScreen = next;
+
+        AudioManager.Instance.Play("Slide");
 
         Vector2 newPos = new Vector2(
             -currentScreen.x * screenSize.x,

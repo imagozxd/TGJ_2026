@@ -1,2 +1,14 @@
 fileFormatVersion: 2
 guid: 13c6659542b9ad847a47cafb0f087e24
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - crudo: {fileID: -1336181327845718645, guid: 0558de61b317c4f4198e5c19e7837b2d, type: 3}
+  - cocido: {fileID: 7476883630603231043, guid: c97f6a36d9bec9b4983b7a0dabb1775b, type: 3}
+  - quemado: {fileID: -1733152743345551990, guid: af65f2801daf0ee4ea6a9886bae22c4e, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
