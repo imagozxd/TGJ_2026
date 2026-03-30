@@ -7,6 +7,13 @@ public class GameManager : MonoBehaviour {
     }
 
     public void GameOver() {
-        
+
+        BackToMainMenu();
+    }
+
+    public void BackToMainMenu()
+    {
+        // vuelve al menu princopal (scene)
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
     }
 }
